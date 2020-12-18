@@ -1,0 +1,19 @@
+-------------------- Auto-Git Log --------------------
+		Fri Dec 18 2020 20:07:23 GMT+0530 (India Standard Time)
+------------------------------------------------------
+
+Modified files:
+* application/controllers/Customer.php
+* application/controllers/User.php
+* application/models/User_model.php
+* application/views/users/userList.php
+
+
+Created files:
+* .autogit/logs/log-18-11-2020-19-37-14.txt
+
+
+Deleted files:
+
+
+Renamed files:

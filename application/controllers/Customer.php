@@ -28,7 +28,7 @@ class Customer extends CI_Controller {
 
                           if($this->input->post('new_customer')){
                           $this->db->where('customer_name',$this->input->post('customer_name'));
-                          $query = $this->db->get('users');
+                          $query = $this->db->get('customer');
                           $count_row = $query->num_rows();
                          if ($count_row > 0) { 
 
