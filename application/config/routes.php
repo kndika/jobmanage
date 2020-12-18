@@ -12,3 +12,6 @@ $route['users'] = 'user/users';
 
 // customer
 $route['customer'] = 'customer/customer';
+
+//diveloper
+$route['developer'] = 'developer/developer';

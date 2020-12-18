@@ -142,6 +142,7 @@ if($this->input->post('newuser')){
 			}
 }
 
+
 		$this->load->view('template/template', $data);
         }
 

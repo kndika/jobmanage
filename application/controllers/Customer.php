@@ -44,7 +44,7 @@ class Customer extends CI_Controller {
 								  showConfirmButton: true,
 								  timer: 1000,
 								}).then(function() {
-			  window.location = "'.base_url('user/users').'";
+			  window.location = "'.base_url('customer/customer').'";
 			  });
 			  
 								</script>',
@@ -74,7 +74,7 @@ class Customer extends CI_Controller {
                                                                           showConfirmButton: true,
                                                                           timer: 1000,
                                                                         }).then(function() {
-                                  window.location = "'.base_url('user/users').'";
+                                  window.location = "'.base_url('customer/customer').'";
                                   });
                                   
                                                                         </script>',
@@ -82,6 +82,40 @@ class Customer extends CI_Controller {
 
                         }
                            } 
+
+
+                           //cutomerupdate
+
+                                if($this->input->post('cutomerupdate')){
+                                        $customer_id=$this->input->post('customer_id');
+                                        $newCustomer=array(                                               
+                                                "customer_contact_no"=>$this->input->post('customer_contact_no'),
+                                                "customer_email"=>$this->input->post('customer_email'),
+                                                "customer_account_details"=>$this->input->post('customer_account_details'),
+                                                );
+                                                $this->db->where('customer_id',$customer_id);
+                                                $this->db->update('customer', $newCustomer);
+
+                                                $data = array(
+                                                        "page_title" => "Users",
+                                                        "page_content" => "customer/index",
+                                                         "error" => '<script type="text/javascript">
+                                                                                Swal.fire({
+                                                                                  position: "top-end",
+                                                                                  icon: "success",
+                                                                                  title: "Success !",
+                                                                                  text: "Customer Update Sucess ull !",
+                                                                                  showConfirmButton: true,
+                                                                                  timer: 1000,
+                                                                                }).then(function() {
+                                          window.location = "'.base_url('customer/customer').'";
+                                          });
+                                          
+                                                                                </script>',
+                                                                        );
+                                        
+                                }
+
 
 			$this->load->view('template/template', $data);
          	}

@@ -48,10 +48,10 @@
                        </li>
 
                           <li>
-                          <a><i class="fa fa-bus"></i> Supplier <span class="fa fa-chevron-down"></span></a>
+                          <a><i class="fa fa-bus"></i>Developer<span class="fa fa-chevron-down"></span></a>
                           <ul class="nav child_menu">
-                              <li>  <a href="<?php echo base_url('supplier/supplier')?>">Supplier List</a></li>
-                              <li>  <a href="<?php echo base_url('supplier/supplier_crate')?>">New Supplier</a></li>
+                              <li>  <a href="<?php echo base_url('developer/developer')?>">Developer</a></li>
+                              
                           </ul>
                        </li>
 
