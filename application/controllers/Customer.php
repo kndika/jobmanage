@@ -21,7 +21,68 @@ class Customer extends CI_Controller {
 	public function customer() {
 		$data = array(
 			"page_title" => "Customer",
-			"page_content" => "customer/index",);
+                        "page_content" => "customer/index",);
+                        
+
+                          /// new customer
+
+                          if($this->input->post('new_customer')){
+                          $this->db->where('customer_name',$this->input->post('customer_name'));
+                          $query = $this->db->get('users');
+                          $count_row = $query->num_rows();
+                         if ($count_row > 0) { 
+
+                                $data = array(
+					"page_title" => "Users",
+					"page_content" => "customer/index",
+					 "error" => '<script type="text/javascript">
+								Swal.fire({
+								  position: "top-end",
+								  icon: "warning",
+								  title: "Warning",
+								  text: "This record already exists !",
+								  showConfirmButton: true,
+								  timer: 1000,
+								}).then(function() {
+			  window.location = "'.base_url('user/users').'";
+			  });
+			  
+								</script>',
+                                                        );
+                                                        
+                         }
+                         else{
+                                 
+                                    $newCustomer=array(
+                                        "customer_name"=>$this->input->post('customer_name'),
+                                        "customer_contact_no"=>$this->input->post('customer_contact_no'),
+                                        "customer_email"=>$this->input->post('customer_email'),
+                                        "customer_account_details"=>$this->input->post('customer_account_details'),
+                                        "customer_balance"=>0,);
+                                        $this->db->insert('customer', $newCustomer);
+                                         
+
+                                         $data = array(
+                                                "page_title" => "Users",
+                                                "page_content" => "customer/index",
+                                                 "error" => '<script type="text/javascript">
+                                                                        Swal.fire({
+                                                                          position: "top-end",
+                                                                          icon: "warning",
+                                                                          title: "Warning",
+                                                                          text: "This record already exists !",
+                                                                          showConfirmButton: true,
+                                                                          timer: 1000,
+                                                                        }).then(function() {
+                                  window.location = "'.base_url('user/users').'";
+                                  });
+                                  
+                                                                        </script>',
+                                                                );
+
+                        }
+                           } 
+
 			$this->load->view('template/template', $data);
          	}
 

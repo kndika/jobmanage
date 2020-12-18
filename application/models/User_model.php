@@ -11,7 +11,7 @@ class User_model extends CI_Model {
     
 
  public function crate($user) {
-      $this->db->insert('user_login',$user); 
+      $this->db->insert('users',$user); 
  }
 
  public function edit($user_id,$usrDetails){

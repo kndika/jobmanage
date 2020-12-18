@@ -156,20 +156,20 @@
       <div class="col">
             <div class="form-group">
              <label for="usr">User Name:</label>
-             <input type="text" class="form-control" id="usr">
+             <input type="text" class="form-control" id="usr" name="user_name" required>
             </div>
       </div>
       <div class="col">
          <div class="form-group">
              <label for="usr">Password:</label>
-             <input type="password" class="form-control" id="usr">
+             <input type="password" class="form-control" id="usr" name="user_password" required>
          </div>
       </div>
 
       <div class="col">
       <div class="form-group">
                 <label for="sel1" >Select User Role:</label>
-                <select class="form-control" id="sel1" name="user_role">
+                <select class="form-control" id="sel1" name="user_role" required>
                     <option value="1">Director</option>
                     <option value="2">Secretary</option>
                     <option value="3">Manager</option>
@@ -184,7 +184,7 @@
 
 
 
-        <input type="submit" class="btn btn-success" value="Save" name="resetpass">
+        <input type="submit" class="btn btn-success" value="Save" name="newuser">
 
 
 

@@ -69,7 +69,7 @@ if($this->input->post('roleupdate')){
 					position: "top-end",
 					icon: "success",
 					title: "Done",
-					text: "Password Reset Sucess full !",
+					text: "User update Sucess full !",
 					showConfirmButton: true,
 					timer: 1000,
 				  }).then(function() {
@@ -83,6 +83,64 @@ window.location = "'.base_url('user/users').'";
 }
 
 // new user 
+if($this->input->post('newuser')){
+
+	$this->db->where('user_name', $this->input->post('user_name'));
+    $query = $this->db->get('users');
+    $count_row = $query->num_rows();
+
+    if ($count_row > 0) { 
+
+		// duplicate
+		$data = array(
+			"page_title" => "Users",
+			"page_content" => "users/userList",
+			 "error" => '<script type="text/javascript">
+						Swal.fire({
+						  position: "top-end",
+						  icon: "warning",
+						  title: "Worning",
+						  text: "This User Already excites . !",
+						  showConfirmButton: true,
+						  timer: 1000,
+						}).then(function() {
+	  window.location = "'.base_url('user/users').'";
+	  });
+	  
+						</script>',
+					);
+
+	
+			}
+			else{
+                     //// new user crate
+				$user=array(
+					"user_name"=>$this->input->post('user_name'),
+					"user_password"=>md5($this->input->post('user_password')),
+					"user_role"=>$this->input->post('user_role'),
+				);
+			
+				$this->User_model-> crate($user);
+			
+				$data = array(
+					"page_title" => "Users",
+					"page_content" => "users/userList",
+					 "error" => '<script type="text/javascript">
+								Swal.fire({
+								  position: "top-end",
+								  icon: "success",
+								  title: "Done",
+								  text: "New User Crate Sucess full !",
+								  showConfirmButton: true,
+								  timer: 1000,
+								}).then(function() {
+			  window.location = "'.base_url('user/users').'";
+			  });
+			  
+								</script>',
+							);
+			}
+}
 
 		$this->load->view('template/template', $data);
         }
