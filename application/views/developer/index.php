@@ -181,29 +181,28 @@
       <div class="row">
         <div class="col">
                 <div class="form-group">
-                <label for="sel1">Select list:</label>
-                <select class="form-control" id="sel1">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
+                <label for="sel1">Program:</label>
+                <select class="form-control" id="sel1" name="langvages">
+                    <option>Anroid App</option>
+                    <option>Apple App</option>
+                    <option>Front End</option>
+                    <option>PHP</option>
+                    <option>PHP</option>
                 </select>
                 </div>
         </div>
 
         <div class="col">
                 <div class="form-group">
-                <label for="sel1">Select list:</label>
+                <label for="sel1">Status:</label>
                 <select class="form-control" id="sel1">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
+                    <option value="1">Active</option>
+                    <option value="1">Remove</option>
                 </select>
                 </div>
         </div>
 
-        
+
 
       </div>
 
