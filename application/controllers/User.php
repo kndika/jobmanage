@@ -82,6 +82,8 @@ window.location = "'.base_url('user/users').'";
 
 }
 
+// new user 
+
 		$this->load->view('template/template', $data);
         }
 

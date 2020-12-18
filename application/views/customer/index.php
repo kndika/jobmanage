@@ -144,7 +144,7 @@
 
       <!-- Modal Header -->
       <div class="modal-header">
-        <h4 class="modal-title">Ad New User</h4>
+        <h4 class="modal-title">Ad New Customer</h4>
         <button type="button" class="close" data-dismiss="modal">&times;</button>
       </div>
 
@@ -153,38 +153,46 @@
       <form action="" method="post">
 
       <div class="row">
-      <div class="col">
-            <div class="form-group">
-             <label for="usr">User Name:</label>
-             <input type="text" class="form-control" id="usr">
-            </div>
-      </div>
-      <div class="col">
-         <div class="form-group">
-             <label for="usr">Password:</label>
-             <input type="password" class="form-control" id="usr">
-         </div>
+          <div class="col">
+                <div class="form-group">
+                <label for="usr">User Name:</label>
+                <input type="text" class="form-control" id="usr"  name="customer_name" required>
+                </div>
+          </div>
+        <div class="col">
+          <div class="form-group">
+              <label for="usr">Contat no:</label>
+              <input type="text" class="form-control" name="customer_contact_no"  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" required>
+          </div>
+        </div>
+
       </div>
 
-      <div class="col">
-      <div class="form-group">
-                <label for="sel1" >Select User Role:</label>
-                <select class="form-control" id="sel1" name="user_role">
-                    <option value="1">Director</option>
-                    <option value="2">Secretary</option>
-                    <option value="3">Manager</option>
-                    <option value="4">Tech Support</option>
-                </select>
+
+      <div class="row">
+          <div class="col">
+                <div class="form-group">
+                <label for="usr">Email:</label>
+                <input type="email" class="form-control" id="usr" name="customer_email">
+                </div>
+          </div>
+        <div class="col">
+          <div class="form-group">
+              <label for="usr">Account Details:</label>
+              <textarea rows="" cols="" class="form-control" name="customer_account_details"></textarea>
+             
+          </div>
         </div>
-      
+
       </div>
-      </div>
+
+
       
        
 
 
 
-        <input type="submit" class="btn btn-success" value="Save" name="resetpass">
+        <input type="submit" class="btn btn-success" value="Save" name="new_customer">
 
 
 
