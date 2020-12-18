@@ -35,57 +35,14 @@ class Customer_model extends CI_Model {
 
 
 
-public function permisstion(){
-// not loging rederaCT    
-if(empty($this->session->user_id)){
- redirect(base_url());
- }
 
-    $user = $this->db->select("*")->where(['user_id' => $this->session->user_id,])->get('users')->row();
-  if ($user) {
-            $logindata = [
-                         'user_role'=>$user->user_role];
-$this->session->set_userdata($logindata); 
-           }
-
-
-
-
-
-               }
  
- 
- public function branch_list() {     
-    $this->db->from('branch as br');
+ public function customer_list() {     
+    $this->db->from('customer');
     $query = $this->db->get();
     return $query->result();  
      }
 
-
- 
- public function user_list() {     
-    $this->db->from('users as user');
-   //  $this->db->join('branch as br', 'br.branch_id = user.user_branch_id','LEFT');
-   //  $this->db->join('user_login as ur', 'ur.user_id = user.user_crate_by','LEFT');
-    $query = $this->db->get();
-    return $query->result();  
-      }
-
-
-
-public function oneuser($user_id) {
-    $this->db->select('*');
-    $this->db->from('user_login as ur');
-    $this->db->where('ur.user_id',$user_id);
-     $this->db->join('branch as br', 'br.branch_id = ur.user_branch_id','LEFT');
-    $query = $this->db->get();
-    $query = $query->result_array();
-       if ($query) {
-        return $query[0];
-       } else {
-        return array();
-        }
-    }
 
 
  
