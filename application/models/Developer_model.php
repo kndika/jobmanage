@@ -10,8 +10,8 @@ class Developer_model extends CI_Model {
     }
     
 
- public function crate($user) {
-      $this->db->insert('user_login',$user); 
+ public function crate( $devloper) {
+      $this->db->insert('developers', $devloper); 
  }
 
  public function edit($user_id,$usrDetails){
