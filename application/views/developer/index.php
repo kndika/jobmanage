@@ -213,7 +213,7 @@
 
 
 
-        <input type="submit" class="btn btn-success" value="Save" name="new_customer">
+        <input type="submit" class="btn btn-success" value="Save" name="new_developer">
 
 
 
