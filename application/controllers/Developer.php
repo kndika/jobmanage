@@ -112,6 +112,18 @@ class Developer extends CI_Controller {
 
                 //devolper update
 
+                if($this->input->post('developerupdate')){
+
+
+                        $this->form_validation->set_rules('developers_name', 'User Name', 'trim|required|xss_clean');
+                        $this->form_validation->set_rules('developers_contact', 'Password', 'trim|required|xss_clean');
+                        $this->form_validation->set_rules('developers_email', 'Password', 'trim|required|xss_clean');
+                        $this->form_validation->set_rules('developers_bankDetails', 'Password', 'trim|required|xss_clean');
+                        if ($this->form_validation->run() == FALSE) {
+                        }
+
+                }
+
 
 		                    
                         $this->load->view('template/template', $data);

@@ -138,7 +138,7 @@
 
 
          </br>
-        <input type="submit" class="btn btn-success" value="Save" name="cutomerupdate">
+        <input type="submit" class="btn btn-success" value="Save" name="developerupdate">
         </form>
       </div>
 
