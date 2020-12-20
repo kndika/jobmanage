@@ -15,7 +15,7 @@
                     <table id="datatable" class="table table-striped table-bordered" style="width:100%">
                       <thead>
                         <tr>
-                          <th>Customer Name</th>
+                          <th>Developer Name</th>
                           <th>Contact No</th>                        
                           <th>Email</th>
                           <th>Balance</th>
