@@ -14,9 +14,9 @@ class Developer_model extends CI_Model {
       $this->db->insert('developers', $devloper); 
  }
 
- public function edit($user_id,$usrDetails){
-    $this->db->where('user_id',$user_id);
-    $this->db->update('users',$usrDetails);
+ public function edit($developers_id, $devloper){
+    $this->db->where('developers_id',$developers_id);
+    $this->db->update('developers', $devloper);
  }
 
  

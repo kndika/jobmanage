@@ -48,7 +48,14 @@ public function dashbord(){
         "page_title" => "Dashbord",
 		"page_content" => "dashbord/index",);
 		$this->load->view('template/template', $data);
-        }
+		}
+		
+
+
+
+public function new_job(){
+	
+}
 
 
 

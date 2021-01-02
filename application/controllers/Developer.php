@@ -119,7 +119,60 @@ class Developer extends CI_Controller {
                         $this->form_validation->set_rules('developers_contact', 'Password', 'trim|required|xss_clean');
                         $this->form_validation->set_rules('developers_email', 'Password', 'trim|required|xss_clean');
                         $this->form_validation->set_rules('developers_bankDetails', 'Password', 'trim|required|xss_clean');
+                        $this->form_validation->set_rules('developers_langvages', 'Langvages', 'trim|required|xss_clean');
+                        $this->form_validation->set_rules('developers_status', 'Status', 'trim|required|xss_clean');
+                        
+                     
                         if ($this->form_validation->run() == FALSE) {
+
+                                $data = array(
+                                        "page_title" => "Users",
+                                        "page_content" => "developer/index",
+                                         "error" => '<script type="text/javascript">
+                                                                Swal.fire({
+                                                                  position: "top-end",
+                                                                  icon: "warning",
+                                                                  title: "warning !",
+                                                                  text: "'.$this->input->post('developers_name').'  Cannot Update",
+                                                                  showConfirmButton: true,
+                                                                  timer: 1000,
+                                                                }).then(function() {
+                          window.location = "'.base_url('developer/developer').'";
+                          }); </script>',);
+
+
+                        }
+                        else{
+                              $developers_id=$this->input->post('developers_id');
+                                
+                                $devloper=array(
+                                        "developers_name"=>$this->input->post('developers_name'),
+                                        "developers_contact"=>$this->input->post('developers_contact'),
+                                        "developers_email"=>$this->input->post('developers_email'),
+                                        "developers_bankDetails"=>$this->input->post('developers_bankDetails'),
+                                        "developers_langvages"=>$this->input->post('developers_langvages'),
+                                        "developers_status"=>$this->input->post('developers_status'),                                        
+                                );
+
+                                $this->Developer_model->edit($developers_id, $devloper);
+
+
+                                $data = array(
+                                        "page_title" => "Users",
+                                        "page_content" => "developer/index",
+                                         "error" => '<script type="text/javascript">
+                                                                Swal.fire({
+                                                                  position: "top-end",
+                                                                  icon: "success",
+                                                                  title: "Success !",
+                                                                  text: "'.$this->input->post('developers_name').'  Update Success Full",
+                                                                  showConfirmButton: true,
+                                                                  timer: 1000,
+                                                                }).then(function() {
+                          window.location = "'.base_url('developer/developer').'";
+                          }); </script>',);
+
+
                         }
 
                 }
