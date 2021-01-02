@@ -46,14 +46,48 @@
                           <td>
 
                             <?php 
+                            if($job->developers_status==2){
                                 $now = time();
                                 $your_date = strtotime($job->job_targat_date);
                                 $datediff = $your_date - $now;                          
                                 echo round($datediff / (60 * 60 * 24));
+                            }
                             ?>
                           </td>
-                          <td></td>
+                          <td>
+                          <a href="" data-toggle="modal" data-target="#advance<?php echo $job->job_id?>"> <i class="fa fa-money fa-2x text-success" ></i></a>
+                          <a href="" data-toggle="modal" data-target="#edit<?php echo $job->job_id?>"> <i class="fa fa-dashcube fa-2x text-success"></i></a>
+                          <a href="" data-toggle="modal" data-target="#edit<?php echo $job->job_id?>"> <i class="fa fa-edit fa-2x text-success"></i></a>
+                          </td>
                         </tr>
+
+
+
+
+ <!-- The Modal -->
+<div class="modal fade" id="advance<?php echo $job->job_id?>">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Modal Heading</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        Modal body..
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
 
 
 
@@ -70,6 +104,6 @@
 
 <!--------
  <a href="" data-toggle="modal" data-target="#passwd<?php echo $job->job_id?>"> <i class="fa fa-key fa-2x text-danger"></i></a>
-                           <a href="" data-toggle="modal" data-target="#edit<?php echo $job->job_id?>"> <i class="fa fa-edit fa-2x text-success"></i></a>                            
+                                                      
 
                            !------------->
