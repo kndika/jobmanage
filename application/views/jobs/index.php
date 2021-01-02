@@ -13,26 +13,59 @@
                                 </div>
                                 <div class="x_content">
                                     <form class="" action="" method="post" novalidate>
-
-
-                                    <div class="row">
-
-                                    <div class="col">
-                                    <div class="field item form-group">
-                                            <label class="col-form-label col-md-3 col-sm-3  label-align">Name<span class="required">*</span></label>
-                                            <div class="col-md-6 col-sm-6">
-                                                <input class="form-control" data-validate-length-range="6" data-validate-words="2" name="name" placeholder="ex. John f. Kennedy" required="required" />
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col"></div>
-
-
-                                    </div>
                                        
                                      
+                                        <div class="field item form-group">
+                                            <label class="col-form-label col-md-3 col-sm-3  label-align">Customer Name<span class="required">*</span></label>
+                                            <div class="col-md-6 col-sm-6">
+                                            <select class="form-control"  required="required" name="job_customer_id">
+                                                    <option value="2">1</option>
+                                                    <option value="2">2</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="field item form-group">
+                                            <label class="col-form-label col-md-3 col-sm-3  label-align">Developer<span class="required">*</span></label>
+                                            <div class="col-md-6 col-sm-6">
+                                                <select class="form-control"  required="required" name="job_developers_id">
+                                                    <option value="2">1</option>
+                                                    <option value="2">2</option>
+                                                </select>
+                                                </div>
+                                        </div>
+                                        <div class="field item form-group">
+                                            <label class="col-form-label col-md-3 col-sm-3  label-align">Job Name<span class="required">*</span></label>
+                                            <div class="col-md-6 col-sm-6">
+                                                <input class="form-control" name="email" class='email' required="required" type="email" /></div>
+                                        </div>
+                                        <div class="field item form-group">
+                                            <label class="col-form-label col-md-3 col-sm-3  label-align">Job Cost<span class="required">*</span></label>
+                                            <div class="col-md-6 col-sm-6">
+                                                <input class="form-control" type="email" class='email' name="confirm_email" data-validate-linked='email' required='required' /></div>
+                                        </div>
                                        
+                                        <div class="field item form-group">
+                                            <label class="col-form-label col-md-3 col-sm-3  label-align">Targat Date<span class="required">*</span></label>
+                                            <div class="col-md-6 col-sm-6">
+                                                <input class="form-control" class='date' type="date" name="date" required='required'></div>
+                                        </div>
+
+                                         
+                                        <div class="field item form-group">
+                                            <label class="col-form-label col-md-3 col-sm-3  label-align">Requament<span class="required">*</span></label>
+                                            <div class="col-md-6 col-sm-6">
+                                                <textarea rows=""   class="form-control" cols="" required='required'></textarea>
+                                                </div>
+                                        </div>
+
+
+                                        <div class="field item form-group">
+                                            <label class="col-form-label col-md-3 col-sm-3  label-align">Requament<span class="required">*</span></label>
+                                            <div class="col-md-6 col-sm-6">
+                                                <input class="form-control" class='date' type="file" name="date" required='required'></div>
+                                        </div>
+                                      
+                                        
                                         
                                         <div class="ln_solid">
                                             <div class="form-group">

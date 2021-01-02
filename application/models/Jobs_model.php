@@ -35,7 +35,7 @@ class Jobs_model extends CI_Model {
 
 
 
-
+// customer list
  
  public function customer_list() {     
     $this->db->from('customer');
