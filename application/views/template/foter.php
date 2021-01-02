@@ -68,6 +68,9 @@
     <script src="<?php echo base_url('vendors/jszip/dist/jszip.min.js')?>"></script>
     <script src="<?php echo base_url('vendors/pdfmake/build/pdfmake.min.js')?>"></script>
     <script src="<?php echo base_url('vendors/pdfmake/build/vfs_fonts.js')?>"></script>
+
+    <!-- iCheck -->
+	<script src="<?php echo base_url('vendors/iCheck/icheck.min.js')?>"></script>
     
    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>

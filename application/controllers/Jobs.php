@@ -11,7 +11,7 @@ class Jobs extends CI_Controller {
         $this->load->library('session');
         $this->load->helper('security');
         $this->load->library('email');
-        //$this->load->model('Branches_model');
+        $this->load->model('Jobs_model');
         $this->load->model('User_model');
         // $this->load->model('Sms_model');
 	}
@@ -52,9 +52,13 @@ public function dashbord(){
 		
 
 
-
+// new jobs
 public function new_job(){
-	
+	$data = array(
+        "page_title" => "Dashbord",
+		"page_content" => "jobs/index",);
+		$this->load->view('template/template', $data);
+
 }
 
 
