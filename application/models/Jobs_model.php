@@ -11,7 +11,7 @@ class Jobs_model extends CI_Model {
     
 
  public function crate($job_details) {
-      $this->db->insert('job details',$job_details); 
+      $this->db->insert('job_details',$job_details); 
  }
 
  public function edit($user_id,$usrDetails){
@@ -51,6 +51,19 @@ public function developer_list() {
     $query = $this->db->get();
     return $query->result();  
      }
+
+
+     // joblist pending
+
+public function pending_Job_List(){
+
+    $this->db->from('job_details as job');
+    $this->db->join('customer as cu', 'cu.customer_id = job.job_customer_id','LEFT');
+    $query = $this->db->get();
+    return $query->result();  
+
+
+}
 
 
 

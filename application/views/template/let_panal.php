@@ -74,7 +74,7 @@
                   <li><a><i class="fa fa-cubes"></i> Jobs <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                    <li> <a href="<?php echo base_url('jobs/new_job')?>">New Job</a></li>
-                   <li> <a href="<?php echo base_url('product/product_name')?>">Product Name</a></li>
+                   <li> <a href="<?php echo base_url('jobs/joblist')?>">Job List</a></li>
                    <li> <a href="<?php echo base_url('product/stockItem')?>">Stock Item</a></li>
                    <li> <a href="<?php echo base_url('product/deleteStockItem')?>">Delet Stock Item</a></li>
                    <?php // }?>

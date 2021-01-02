@@ -1,0 +1,19 @@
+-------------------- Auto-Git Log --------------------
+		Sat Jan 02 2021 11:46:50 GMT+0530 (India Standard Time)
+------------------------------------------------------
+
+Modified files:
+* application/controllers/Jobs.php
+* application/models/Jobs_model.php
+* application/views/jobs/index.php
+* application/views/template/heder.php
+
+
+Created files:
+* .autogit/logs/log-2-0-2021-11-16-42.txt
+
+
+Deleted files:
+
+
+Renamed files:

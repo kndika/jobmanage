@@ -20,3 +20,4 @@ $route['developer'] = 'developer/developer';
 // jobs 
 //diveloper
 $route['new_job'] = 'jobs/new_job';
+$route['joblist'] = 'jobs/joblist';
