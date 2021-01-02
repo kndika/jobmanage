@@ -20,6 +20,7 @@
                           <th>Devloper</th>
                           <th>Pograss</th>
                           <th>Date Count</th>
+                          <th></th>
                           
                         </tr>
                       </thead>
@@ -35,18 +36,22 @@
                         ?>
                         <tr>
                           <td><?php echo $job->job_name?>  </td>
+                          <td><?php echo $job->customer_name ?>  </td>
+                          <td><?php echo $job->developers_name ?></div>
                           <td>
-                          <?php echo $job->customer_name ?>
-                          
+                              <?php if($job->developers_status==1){ echo 'Not Started';} ?>
+                              <?php if($job->developers_status==2){ echo 'Started';} ?>
+                              <?php if($job->developers_status==3){ echo 'Started';} ?>
+                              </td>
+                          <td>
+
+                            <?php 
+                                $now = time();
+                                $your_date = strtotime($job->job_targat_date);
+                                $datediff = $your_date - $now;                          
+                                echo round($datediff / (60 * 60 * 24));
+                            ?>
                           </td>
-                          
-                          
-                          <td>                  
-                         
-                          
-                         
-                          </td>
-                          <td></td>
                           <td></td>
                         </tr>
 

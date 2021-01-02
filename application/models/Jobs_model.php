@@ -59,6 +59,7 @@ public function pending_Job_List(){
 
     $this->db->from('job_details as job');
     $this->db->join('customer as cu', 'cu.customer_id = job.job_customer_id','LEFT');
+    $this->db->join('developers as de', 'de.developers_id = job.job_developers_id','LEFT');
     $query = $this->db->get();
     return $query->result();  
 
