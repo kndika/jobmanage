@@ -144,6 +144,18 @@ public function joblist(){
 }
 
 
+public function onejob($job_id){
+
+
+	$data = array(
+        "page_title" => "One Job",
+		"page_content" => "jobs/onejob",
+	    "job"=>$this->Jobs_model->onejob($job_id),);
+	$this->load->view('template/template', $data);
+
+
+}
+
 
 
 

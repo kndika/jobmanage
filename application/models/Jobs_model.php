@@ -60,11 +60,30 @@ public function pending_Job_List(){
     $this->db->from('job_details as job');
     $this->db->join('customer as cu', 'cu.customer_id = job.job_customer_id','LEFT');
     $this->db->join('developers as de', 'de.developers_id = job.job_developers_id','LEFT');
-    $this->db->join('job_advance as ad', 'ad.job_id = job.job_id','LEFT');
+    $this->db->join('job_advance as ad', 'ad.job_detail_id = job.job_id','LEFT');
 
     $query = $this->db->get();
     return $query->result();  
 
+
+}
+
+
+// one job
+public function onejob($job_id){
+
+    $this->db->from('job_details as job');
+    $this->db->join('customer as cu', 'cu.customer_id = job.job_customer_id','LEFT');
+    $this->db->join('developers as de', 'de.developers_id = job.job_developers_id','LEFT');
+    $this->db->join('job_advance as ad', 'ad.job_detail_id = job.job_id','LEFT');
+    $this->db->where('jo.job_id',$job_id);
+    $query = $this->db->get();
+         $query = $query->result_array();
+        if ($query) {
+            return $query[0];
+        } else {
+            return array();
+        }
 
 }
 

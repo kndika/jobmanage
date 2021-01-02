@@ -35,7 +35,7 @@
                          
                         ?>
                         <tr>
-                          <td><?php echo $job->job_name?>  </td>
+                          <td><a href="<?php echo base_url('jobs/onejob/'.$job->job_id.'')?>" ><?php echo $job->job_name?>  </a></td>
                           <td><?php echo $job->customer_name ?>  </td>
                           <td><?php echo $job->developers_name ?></div>
                           <td>
@@ -58,7 +58,7 @@
                               <?php if(!empty($job->job_cost)){?>
                           <a href="" data-toggle="modal" data-target="#advance<?php echo $job->job_id?>"> <i class="fa fa-money fa-2x text-success" ></i></a>
                          <?php }?>
-                          <a href="" data-toggle="modal" data-target="#edit<?php echo $job->job_id?>"> <i class="fa fa-dashcube fa-2x text-success"></i></a>
+                         
                           <a href="" data-toggle="modal" data-target="#edit<?php echo $job->job_id?>"> <i class="fa fa-edit fa-2x text-success"></i></a>
                           </td>
                         </tr>

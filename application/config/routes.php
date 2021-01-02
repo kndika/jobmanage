@@ -19,5 +19,6 @@ $route['developer'] = 'developer/developer';
 
 // jobs 
 //diveloper
-$route['new_job'] = 'jobs/new_job';
-$route['joblist'] = 'jobs/joblist';
+$route['new_job'] = 'jobs/new_job'; // new job
+$route['joblist'] = 'jobs/joblist'; // pending joblist
+$route['onejob/(:any)'] = 'jobs/onejob'; // one job
