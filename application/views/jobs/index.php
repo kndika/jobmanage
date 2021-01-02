@@ -45,7 +45,7 @@
                                         <div class="field item form-group">
                                             <label class="col-form-label col-md-3 col-sm-3  label-align">Job Cost<span class="required">*</span></label>
                                             <div class="col-md-6 col-sm-6">
-                                                <input class="form-control" type="text" class='email' name="job_cost" data-validate-linked='email' required='required' /></div>
+                                                <input class="form-control" type="text" class='email' name="job_cost" data-validate-linked='email'  /></div>
                                         </div>
                                        
                                         <div class="field item form-group">

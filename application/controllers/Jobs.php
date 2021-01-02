@@ -63,7 +63,7 @@ public function new_job(){
 
 			$this->form_validation->set_rules('job_customer_id', 'User Name', 'trim|required|xss_clean');
 			$this->form_validation->set_rules('job_developers_id', 'Password', 'trim|required|xss_clean');
-			$this->form_validation->set_rules('job_cost', 'Password', 'trim|required|xss_clean');
+			//$this->form_validation->set_rules('job_cost', 'Password', 'trim|required|xss_clean');
 			$this->form_validation->set_rules('job_name', 'Password', 'trim|required|xss_clean');
 			$this->form_validation->set_rules('job_targat_date', 'Langvages', 'trim|required|xss_clean');
 			$this->form_validation->set_rules('job_requament', 'Status', 'trim|required|xss_clean');		

@@ -55,7 +55,9 @@
                             ?>
                           </td>
                           <td>
+                              <?php if(!empty($job->job_cost)){?>
                           <a href="" data-toggle="modal" data-target="#advance<?php echo $job->job_id?>"> <i class="fa fa-money fa-2x text-success" ></i></a>
+                         <?php }?>
                           <a href="" data-toggle="modal" data-target="#edit<?php echo $job->job_id?>"> <i class="fa fa-dashcube fa-2x text-success"></i></a>
                           <a href="" data-toggle="modal" data-target="#edit<?php echo $job->job_id?>"> <i class="fa fa-edit fa-2x text-success"></i></a>
                           </td>
@@ -71,13 +73,25 @@
 
       <!-- Modal Header -->
       <div class="modal-header">
-        <h4 class="modal-title">Modal Heading</h4>
+        <h4 class="modal-title"><?php echo $job->job_name?> Advance </h4>
         <button type="button" class="close" data-dismiss="modal">&times;</button>
       </div>
 
       <!-- Modal body -->
       <div class="modal-body">
-        Modal body..
+       <form action="" method="post">
+
+       <input class="form-control" type="hidden" name="job_id"  value="<?php echo $job->job_id?>" />
+
+       <div class="field item form-group">
+                <label class="col-form-label col-md-3 col-sm-3  label-align">Advance<span class="required">*</span></label>
+                    <div class="col-md-6 col-sm-6">
+                    <input class="form-control" type="text" class='email' name="job_cost" data-validate-linked='email' required='required' /></div>
+                </div>
+
+
+
+       </form>
       </div>
 
       <!-- Modal footer -->
