@@ -61,19 +61,22 @@ public function new_job(){
 
 		if($this->input->post('newJob')){
 			$job_details=array(
-				"job_customer_id"=>$this->input->post('customer_id'),
-				"job_developers_id"=>$this->input->post('developers_id'),
+				"job_customer_id"=>$this->input->post('job_customer_id'),
+				"job_developers_id"=>$this->input->post('job_developers_id'),
 				"job_cost"=>$this->input->post('job_cost'),
 				"job_name"=>$this->input->post('job_name'),
-				"job_start_date"=>$this->input->post('developers_id'),
+				"job_start_date"=>date('Y-m-d'),
 				"job_targat_date"=>$this->input->post('job_targat_date'),
 				"job_requament"=>$this->input->post('job_requament'),
-				"job_requament_attachment"=>'',
+				"job_requament_attachment"=>1,
 				"job_add_date"=>$this->input->post('developers_id'),
 				"job_add_user_id"=>$this->session->user_id,
 				"job_status"=>1,
 			);
 
+
+			//print_r($job_details);
+			$this->Jobs_model->crate($job_details);
 		}
 
 

@@ -10,8 +10,8 @@ class Jobs_model extends CI_Model {
     }
     
 
- public function crate($user) {
-      $this->db->insert('user_login',$user); 
+ public function crate($job_details) {
+      $this->db->insert('job details',$job_details); 
  }
 
  public function edit($user_id,$usrDetails){

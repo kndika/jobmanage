@@ -40,12 +40,12 @@
                                         <div class="field item form-group">
                                             <label class="col-form-label col-md-3 col-sm-3  label-align">Job Name<span class="required">*</span></label>
                                             <div class="col-md-6 col-sm-6">
-                                                <input class="form-control" name="job_name" class='email' required="required" type="email" /></div>
+                                                <input class="form-control" name="job_name" class='email' required="required" type="text" /></div>
                                         </div>
                                         <div class="field item form-group">
                                             <label class="col-form-label col-md-3 col-sm-3  label-align">Job Cost<span class="required">*</span></label>
                                             <div class="col-md-6 col-sm-6">
-                                                <input class="form-control" type="email" class='email' name="job_cost" data-validate-linked='email' required='required' /></div>
+                                                <input class="form-control" type="text" class='email' name="job_cost" data-validate-linked='email' required='required' /></div>
                                         </div>
                                        
                                         <div class="field item form-group">
@@ -58,10 +58,17 @@
                                         <div class="field item form-group">
                                             <label class="col-form-label col-md-3 col-sm-3  label-align">Requament<span class="required">*</span></label>
                                             <div class="col-md-6 col-sm-6">
-                                                <textarea rows=""   class="form-control" cols="" required='required' name="job_requament"></textarea>
+                                                <textarea rows="50" id="editor"  class="form-control" cols="20" required='required' name="job_requament"></textarea>
                                                 </div>
                                         </div>
 
+
+                                      
+
+                                      
+
+
+                                        
 
                                   
                                       
@@ -70,7 +77,7 @@
                                         <div class="ln_solid">
                                             <div class="form-group">
                                                 <div class="col-md-6 offset-md-3">
-                                                    <button type='submit' class="btn btn-primary" name="newJob">Submit</button>
+                                                    <input type='submit' class="btn btn-primary" name="newJob" value="Save">
                                                     <button type='reset' class="btn btn-success">Reset</button>
                                                 </div>
                                             </div>
@@ -134,4 +141,15 @@
                 $('form .alert').remove();
         }).prop('checked', false);
 
+    </script>
+
+
+
+  
+    <script>
+        ClassicEditor
+            .create( document.querySelector( '#editor' ) )
+            .catch( error => {
+                console.error( error );
+            } );
     </script>
