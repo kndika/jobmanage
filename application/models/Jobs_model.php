@@ -43,6 +43,16 @@ class Jobs_model extends CI_Model {
     return $query->result();  
      }
 
+// devloper list
+
+ 
+public function developer_list() {     
+    $this->db->from('developers');
+    $query = $this->db->get();
+    return $query->result();  
+     }
+
+
 
 
  

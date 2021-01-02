@@ -57,6 +57,27 @@ public function new_job(){
 	$data = array(
         "page_title" => "Dashbord",
 		"page_content" => "jobs/index",);
+
+
+		if($this->input->post('newJob')){
+			$job_details=array(
+				"job_customer_id"=>$this->input->post('customer_id'),
+				"job_developers_id"=>$this->input->post('developers_id'),
+				"job_cost"=>$this->input->post('job_cost'),
+				"job_name"=>$this->input->post('job_name'),
+				"job_start_date"=>$this->input->post('developers_id'),
+				"job_targat_date"=>$this->input->post('job_targat_date'),
+				"job_requament"=>$this->input->post('job_requament'),
+				"job_requament_attachment"=>'',
+				"job_add_date"=>$this->input->post('developers_id'),
+				"job_add_user_id"=>$this->session->user_id,
+				"job_status"=>1,
+			);
+
+		}
+
+
+
 		$this->load->view('template/template', $data);
 
 }
